@@ -1,0 +1,25 @@
+@use "./variables" as *;
+@use "./mixins" as m;
+
+/* general styles */
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+html {
+   height: 100%;
+}
+body {
+   @include m.flexbox(flex, column, null, null, null, null);
+   height: 100%;
+   font-family: var(--main-font-family);
+   font-weight: var(--main-font-weight-600);
+}
+main {
+   flex-grow: 1;
+}
+img {
+   display: block;
+   height: auto;
+}

@@ -1,0 +1,33 @@
+/* mixins */
+@mixin list-unstyled($m-top, $m-bottom) {
+   margin-top: $m-top;
+   margin-bottom: $m-bottom;
+   padding-left: 0;
+   list-style: none;
+}
+@mixin link-unstyled($block, $color) {
+   display: $block;
+   text-decoration-line: none;
+   color: $color;
+}
+@mixin flexbox($display, $direction, $justify, $align, $row, $column) {
+   display: $display;
+   flex-direction: $direction;
+   justify-content: $justify;
+   align-items: $align;
+   row-gap: $row;
+   column-gap: $column;
+}
+@mixin background-img($image, $size, $repeat, $x-position, $y-position) {
+   background-image: $image;
+   background-size: $size;
+   background-repeat: $repeat;
+   background-position-x: $x-position;
+   background-position-y: $y-position;
+}
+@mixin before-after($display, $width, $height, $content) {
+   display: $display;
+   width: $width;
+   height: $height;
+   content: $content;
+}
