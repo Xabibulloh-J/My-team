@@ -421,4 +421,106 @@ img {
   .container {
     padding: 0 20px;
   }
+}
+.about-hero {
+  padding-top: 60px;
+  padding-bottom: 88px;
+  background-color: var(--main-midnight-green);
+  background-image: url("../../images/about-bg-img.svg");
+  background-size: 80px;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: calc(50% + 205px);
+}
+.about-hero__inner {
+  text-align: center;
+}
+.about-hero__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #FFF;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+}
+.about-hero__desc {
+  margin-bottom: 0;
+  color: #FFF;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+@media only screen and (min-width: 375px) {
+  .about-hero {
+    padding-top: 80px;
+    padding-bottom: 108px;
+    background-image: url("../../images/about-bg-img.svg");
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: calc(50% + 205px);
+  }
+  .about-hero__desc {
+    line-height: 28px;
+  }
+}
+@media only screen and (min-width: 760px) {
+  .about-hero {
+    padding-top: 120px;
+    padding-bottom: 112px;
+    background-image: url("../../images/about-bg-img.svg");
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+  }
+  .about-hero__title {
+    font-size: 64px;
+    line-height: 56px;
+  }
+  .about-hero__desc-wrapper {
+    min-width: 457px;
+    width: 100%;
+    padding-inline: 119px;
+  }
+  .about-hero__desc {
+    margin-top: 24px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .about-hero {
+    padding-top: 124px;
+    padding-bottom: 120px;
+  }
+  .about-hero__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 180px;
+       -moz-column-gap: 180px;
+            column-gap: 180px;
+  }
+  .about-hero__title {
+    line-height: 100px;
+  }
+  .about-hero__desc-wrapper {
+    padding-inline: 0;
+    text-align: left;
+    width: 730px;
+  }
+  .about-hero__desc {
+    margin-top: 0;
+    font-size: 18px;
+    position: relative;
+  }
+  .about-hero__desc::before {
+    padding-top: 4px;
+    margin-bottom: 40px;
+    background-color: var(--main-light-coral);
+    display: block;
+    width: 50px;
+    height: 4px;
+    content: "";
+  }
 }/*# sourceMappingURL=main.css.map */
