@@ -1,0 +1,122 @@
+@use "../mixins";
+
+.our-servic {
+  padding-top: 80px;
+  padding-bottom: 64px;
+  background-color: var(--main-state-green);
+  @include mixins.background-img(url("../images/our-servic-bg.svg"),100px,no-repeat,right,top);
+
+  &__title-wrapper {
+    min-width: 240px;
+    margin-top: 0;
+    margin-bottom: 0;
+    &::before {
+      @include mixins.before-after(block, 50px, 4px,"");
+      background-color: var(--main-light-coral);
+      margin-bottom: 32px;
+    }
+  }
+  &__title {
+    color: #FFF;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 32px;
+  }
+  &__list {
+    @include mixins.list-unstyled(50px,0);
+    display: flex;
+    flex-direction: column;
+    row-gap: 48px;
+  }
+  &__item {
+    text-align: center;
+  }
+
+  &__item-img {
+    margin: 0 auto;
+    width: 72px;
+    height: 72px;
+  }
+  &__item-title {
+    margin-top: 16px;
+    margin-bottom: 8px;
+    color: var(--main-light-coral);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+  &__item-desc {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #FFF;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 25px;
+  }
+
+}
+@media only screen and (min-width: 375px) {
+  .our-servic {
+    padding-top: 100px;
+
+    &__title-wrapper {
+      min-width: 240px;
+      padding-right: 100px;
+    }
+  }
+}
+@media only screen and (min-width: 750px) {
+  .our-servic {
+    padding-top: 136px;
+    padding-bottom: 100px;
+
+    &__title-wrapper {
+      padding-right: 180px;
+    }
+    &__title {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    &__list {
+      margin-top: 64px;
+    }
+    &__item {
+      text-align: left;
+      display: flex;
+    }
+    &__item-title {
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+    &__item-img {
+      margin-right: 23px;
+    }
+  }
+}
+@media only screen and (min-width: 1110px) {
+  .our-servic {
+    padding-top: 198px;
+    padding-bottom: 140px;
+    @include mixins.background-img(url("../images/our-servic-bg.svg"),100px,no-repeat,right,bottom);
+
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__title-wrapper {
+      width: 445px;
+      padding-right: 0;
+    }
+    &__title {
+      font-size: 48px;
+      line-height: 48px;
+    }
+    &__list {
+      padding-top: 32px;
+      margin-top: 0;
+    }
+    &__item-title-wrapper {
+      width: 445px;
+    }
+  }
+}
