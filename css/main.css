@@ -421,4 +421,103 @@ img {
   .container {
     padding: 0 20px;
   }
+}
+.main-hero {
+  padding-top: 60px;
+  padding-bottom: 177px;
+  background-color: var(--main-midnight-green);
+  background-image: url("../images/main-hero-bg.svg");
+  background-size: 350px;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: bottom;
+}
+.main-hero__inner {
+  text-align: center;
+}
+.main-hero__title {
+  margin-top: 0;
+  margin-bottom: 18px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+}
+.main-hero__title-style {
+  color: var(--main-light-coral);
+}
+.main-hero__desc {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+@media only screen and (min-width: 375px) {
+  .main-hero {
+    padding-top: 80px;
+    padding-bottom: 197px;
+  }
+  .main-hero__desc {
+    line-height: 28px;
+  }
+}
+@media only screen and (min-width: 740px) {
+  .main-hero {
+    padding-bottom: 120px;
+    padding-bottom: 256px;
+  }
+  .main-hero__title {
+    margin-bottom: 24px;
+    font-size: 64px;
+    line-height: 56px;
+  }
+  .main-hero__desc-wrapper {
+    width: 457px;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .main-hero {
+    padding-top: 133px;
+    padding-bottom: 250px;
+    background-image: url("../images/main-section-bg.svg"), url("../images/main-hero-bg.svg");
+    background-size: 100px, 350px;
+    background-repeat: no-repeat;
+    background-position: left center, calc(50% + 250px) bottom;
+  }
+  .main-hero__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    text-align: left;
+    -webkit-column-gap: 70px;
+       -moz-column-gap: 70px;
+            column-gap: 70px;
+  }
+  .main-hero__title {
+    margin-bottom: 0;
+    font-size: 100px;
+    line-height: 100px;
+  }
+  .main-hero__desc-wrapper {
+    width: 445px;
+  }
+  .main-hero__desc-wrapper::before {
+    display: block;
+    width: 50px;
+    height: 4px;
+    content: "";
+    background-color: var(--main-rapture-blue);
+    padding-top: 4px;
+    margin-bottom: 79px;
+  }
+  .main-hero__desc {
+    font-size: 18px;
+  }
 }/*# sourceMappingURL=main.css.map */
