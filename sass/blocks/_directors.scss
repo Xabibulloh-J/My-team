@@ -132,8 +132,10 @@
 }
 .open .directors__btn {
   background-color: var(--main-rapture-blue);
-  background-color: var(--main-light-coral);
   transform: rotate(45deg);
+  &:hover {
+    background-color: var(--main-light-coral);
+  }
 }
 
 @include mix.responsive(375px) {
