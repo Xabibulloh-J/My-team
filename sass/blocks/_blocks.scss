@@ -1,6 +1,12 @@
-@use "_visually-hidden";
-@use "_container";
-@use "_header";
-@use "_contact-hero";
-@use "_article";
-@use "_footer";
+@use "visually-hidden";
+@use "container";
+@use "header";
+
+// about
+@use "a-hero";
+@use "directors";
+@use "client";
+
+@use "contact-hero";
+@use "article";
+@use "footer";

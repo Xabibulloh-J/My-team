@@ -1,0 +1,209 @@
+@use "../mixins" as mix;
+
+.directors {
+  padding-top: 88px;
+  padding-bottom: 116px;
+  background-color: var(--main-jungle-green);
+  background-image: url("../../images/service/icons/directbgm.svg"),
+    url("../../images/service/icons/linebgm.svg");
+  background-repeat: no-repeat;
+  background-position: top left, bottom right;
+}
+.directors__title {
+  margin-top: 0;
+  margin-bottom: 48px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 24px;
+  color: #fff;
+}
+.directors__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  row-gap: 52px;
+  column-gap: 11px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+.directors__items {
+  position: relative;
+  max-width: 327px;
+  width: 100%;
+  padding: 32px 24px 56px;
+  background-color: var(--main-state-green);
+}
+.directors__items-top {
+  margin: 0 auto;
+}
+.directors__img {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 16px;
+}
+.directors__subtitle {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--main-rapture-blue);
+  text-align: center;
+  font-size: 18px;
+  line-height: 28px;
+}
+.directors__text {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 25px;
+  color: #fff;
+}
+.directors__items-bottom {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 35px 24px 63px;
+  background-color: var(--main-dark-green);
+}
+.directors__cite {
+  display: block;
+  margin-bottom: 8px;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--main-rapture-blue);
+}
+.directors__quote-wrapper {
+  margin-bottom: 24px;
+}
+.directors__quote {
+  margin: 0;
+  margin-bottom: 24px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: center;
+  color: #fff;
+}
+.directors__logos-wrapper {
+  display: flex;
+  justify-content: center;
+  column-gap: 16px;
+}
+.directors__links {
+  fill: #fff;
+  transition: fill 0.4s ease-in-out;
+  text-decoration: none;
+  &:hover {
+    fill: var(--main-light-coral);
+  }
+}
+.directors__btn {
+  position: absolute;
+  bottom: -28px;
+  left: calc(50% - 28px);
+  width: 56px;
+  height: 56px;
+  border: none;
+  border-radius: 50%;
+  background-image: url("../../images/service/icons/plus.svg");
+  background-repeat: no-repeat;
+  background-color: var(--main-light-coral);
+  background-position: center;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+  transition-property: background-color, transform;
+  &:hover {
+    background-color: var(--main-rapture-blue);
+  }
+}
+
+.open .directors__items-bottom {
+  display: block;
+}
+.open .directors__btn {
+  background-color: var(--main-rapture-blue);
+  background-color: var(--main-light-coral);
+  transform: rotate(45deg);
+}
+
+@include mix.responsive(375px) {
+  .directors__title {
+    font-size: 32px;
+    line-height: 32px;
+  }
+  .directors__quote {
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
+@include mix.responsive(621px) {
+  .directors {
+    padding-top: 100px;
+    padding-bottom: 128px;
+    background-image: url("../../images/service/icons/directbgt.svg"),
+      url("../../images/service/icons/linebgm.svg");
+  }
+  .directors__list {
+    row-gap: 76px;
+  }
+  .directors__items {
+    max-width: 281px;
+  }
+}
+@include mix.responsive(800px) {
+  .directors__title {
+    font-size: 48px;
+    line-height: 48px;
+  }
+  .directors__list {
+    column-gap: 30px;
+  }
+  .directors__quote {
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
+@include mix.responsive(1024px) {
+  .directors {
+    padding-top: 140px;
+    padding-bottom: 168px;
+  }
+  .directors__items {
+    max-width: 290px;
+  }
+  .directors__quote {
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
+@include mix.responsive(1150px) {
+  .directors__items {
+    max-width: 350px;
+  }
+  .directors__quote {
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
+@include mix.responsive(1536px) {
+  .directors {
+    background-position: calc(50% - 710px) top, calc(50% + 686px) bottom;
+  }
+  .directors__items {
+    max-width: 350px;
+  }
+  .directors__quote {
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
