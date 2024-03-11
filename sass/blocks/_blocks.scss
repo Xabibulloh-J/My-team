@@ -1,7 +1,10 @@
 @use "visually-hidden";
 @use "container";
 @use "header";
-
+// Main page
+@use "./main-hero";
+@use "./our-servic";
+@use "./our-customer";
 // about
 @use "a-hero";
 @use "directors";
