@@ -1,0 +1,93 @@
+@use "../mixins";
+
+.main-hero {
+  padding-top: 30px;
+  padding-bottom: 177px;
+  background-color: var(--main-midnight-green);
+  @include mixins.background-img(url("../images/main-hero-bg.svg"),350px,no-repeat,center,bottom);
+
+  &__inner {
+    text-align: center;
+  }
+  &__title {
+    margin-top: 0;
+    margin-bottom: 18px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 40px;
+  }
+  &__title-style {
+    color: var(--main-light-coral);
+  }
+  &__desc {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+}
+@media only screen and (min-width: 375px) {
+  .main-hero {
+    padding-top: 40px;
+    padding-bottom: 197px;
+
+    &__desc {
+      line-height: 28px;
+    }
+  }
+}
+@media only screen and (min-width: 740px) {
+  .main-hero {
+    padding-bottom: 120px;
+    padding-bottom: 256px;
+
+    &__title {
+      margin-bottom: 24px;
+      font-size: 64px;
+      line-height: 56px;
+    }
+    &__desc-wrapper {
+      width: 457px;
+      margin: 0 auto;
+    }
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .main-hero {
+    padding-top: 63px;
+    padding-bottom: 250px;
+    background-image: url("../images/main-section-bg.svg"),url("../images/main-hero-bg.svg");
+    background-size: 100px, 350px;
+    background-repeat: no-repeat;
+    background-position: left center, calc(50% + 250px) bottom;
+
+    &__inner {
+      display: flex;
+      align-items: baseline;
+      text-align: left;
+      column-gap: 70px;
+    }
+    &__title {
+      margin-bottom: 0;
+      font-size: 100px;
+      line-height: 100px;
+    }
+    &__desc-wrapper {
+      width: 445px;
+
+      &::before {
+        @include mixins.before-after(block, 50px, 4px,"");
+        background-color: var(--main-rapture-blue);
+        padding-top: 4px;
+        margin-bottom: 79px;
+      }
+    }
+    &__desc {
+      font-size: 18px;
+    }
+  }
+}

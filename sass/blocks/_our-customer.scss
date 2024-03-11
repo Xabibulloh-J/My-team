@@ -1,0 +1,123 @@
+@use "../mixins";
+
+.our-customer {
+  padding-top: 120px;
+  padding-bottom: 144px;
+  background-color: var(--main-midnight-green);
+  background-image: url("../images/our-customerbg.svg"),url("../images/our-customer-bg.svg");
+  background-repeat: no-repeat;
+  background-size: 200px, 160px;
+  background-position: right bottom,left top;
+
+  &__title-wrapper {
+    text-align: center;
+  }
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 32px;
+  }
+  &__title-style {
+    color: var(--main-rapture-blue);
+  }
+  &__list {
+    @include mixins.list-unstyled(20px, 10px);
+    margin-top: 84px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 84px;
+  }
+  &__item {
+    text-align: center;
+    position: relative;
+
+    &::before {
+      @include mixins.before-after(block, 67px, 56px, "");
+      background-image: url("../images/element.svg");
+      margin: 0 auto;
+      position: absolute;
+      top: -40px;
+      left: 0;
+      right: 0;
+    }
+  }
+  &__item-desc {
+    margin-top: 0;
+    position: relative;
+    z-index: 7;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 25px;
+  }
+  &__item-title {
+    margin-top: 0;
+    margin-bottom: 2px;
+    color: var(--main-rapture-blue);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+  &__item-title-info {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: #fff;
+    font-size: 13px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 18px;
+  }
+  &__item-img {
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 375px) {
+  .our-customer {
+    padding-top: 140px;
+    padding-bottom: 164px;
+
+    &__item {
+      min-width: 327px;
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+  .our-customer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    &__title-wrapper {
+      min-width: 573px;
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .our-customer{
+    padding-top: 140px;
+    padding-bottom: 151px;
+
+    &__title-wrapper {
+      margin: 0 auto;
+      width: 932px;
+      padding: 0;
+    }
+    &__title {
+      font-size: 48px;
+      line-height: 48px;
+    }
+    &__list {
+      margin-top: 92px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &__item {
+      max-width: 350px;
+    }
+  }
+}
