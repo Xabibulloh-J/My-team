@@ -453,22 +453,16 @@ img {
   background-position-x: center;
   background-position-y: center;
 }
-.site-header__menu-background-color {
+.site-header__menu-background {
   display: none;
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 5;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5019607843);
 }
 .site-header__menu-wrapper {
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 10;
   width: 65vw;
   height: 100vh;
   margin-left: auto;
@@ -532,15 +526,7 @@ img {
   line-height: 24px;
 }
 
-.unscrollbody {
-  overflow: hidden;
-}
-
-.open-menu .site-header__menu-background-color {
-  display: block;
-}
-
-.open-menu .site-header__menu-wrapper {
+.open-menu .site-header__menu-background {
   display: block;
 }
 
@@ -613,23 +599,18 @@ img {
     padding-top: 64px;
     padding-bottom: 56px;
   }
-  .site-header__box {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
   .site-header__menu-btn {
     display: none;
   }
-  .site-header__menu-background-color {
-    display: none;
+  .site-header__menu-background {
+    display: block;
+    position: static;
+    max-width: 1000px;
+    height: auto;
+    margin-left: 48px;
+    background-color: transparent;
   }
   .site-header__menu-wrapper {
-    position: static;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -637,14 +618,15 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    min-width: 513px;
-    max-width: 870px;
-    width: 100%;
+    max-width: 1000px;
     height: auto;
-    margin-left: 48px;
+    margin-left: 0;
     padding: 0;
     background-color: transparent;
   }
@@ -677,19 +659,13 @@ img {
     padding-left: 0;
     list-style: none;
   }
-  .site-header__contact-link {
-    margin-left: auto;
-  }
 }
 @media only screen and (min-width: 1150px) {
   .site-header {
     padding-top: 73px;
     padding-bottom: 60px;
   }
-  .site-header .logo__img {
-    width: 160px;
-  }
-  .site-header__menu-wrapper {
+  .site-header__menu-background {
     margin-left: 80px;
   }
   .site-header__link {

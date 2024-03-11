@@ -23,23 +23,17 @@
       @include m.background-img(url("/images/hamburg-menu.svg"), 20px 17px, no-repeat, center, center);
    }
 
-   &__menu-background-color {
+   &__menu-background {
       display: none;
       position: absolute;
       top: 0;
       right: 0;
-      z-index: 5;
       width: 100vw;
       height: 100vh;
       background-color: #00000080;
    }
 
    &__menu-wrapper {
-      display: none;
-      position: absolute;
-      top: 0;
-      right: 0;
-      z-index: 10;
       width: 65vw;
       height: 100vh;
       margin-left: auto;
@@ -85,13 +79,7 @@
       line-height: 24px;
    }
 }
-.unscrollbody {
-   overflow: hidden;
-}
-.open-menu .site-header__menu-background-color {
-   display: block;
-}
-.open-menu .site-header__menu-wrapper {
+.open-menu .site-header__menu-background {
    display: block;
 }
 /* header finish */
@@ -154,26 +142,24 @@
       padding-top: 64px;
       padding-bottom: 56px;
 
-      &__box {
-         @include m.flexbox(flex, row, null, null, null, null);
-      }
-
       &__menu-btn {
          display: none;
       }
 
-      &__menu-background-color {
-         display: none;
+      &__menu-background {
+         display: block;
+         position: static;
+         max-width: 1000px;
+         height: auto;
+         margin-left: 48px;
+         background-color: transparent;
       }
 
       &__menu-wrapper {
-         position: static;
-         @include m.flexbox(flex, row, null, center, null, null);
-         min-width: 513px;
-         max-width: 870px;
-         width: 100%;
+         @include m.flexbox(flex, row, space-between, center, null, null);
+         max-width: 1000px;
          height: auto;
-         margin-left: 48px;
+         margin-left: 0;
          padding: 0;
          background-color: transparent;
 
@@ -192,10 +178,6 @@
          @include m.flexbox(flex, row, null, null, null, 40px);
          @include m.list-unstyled(0, 0);
       }
-
-      &__contact-link {
-         margin-left: auto;
-      }
    }
 }
 
@@ -204,11 +186,7 @@
       padding-top: 73px;
       padding-bottom: 60px;
 
-      .logo__img {
-         width: 160px;
-      }
-
-      &__menu-wrapper {
+      &__menu-background {
          margin-left: 80px;
       }
 
