@@ -1,6 +1,8 @@
 @use "_visually-hidden";
 @use "_container";
-@use "_header";
 // main page
+@use "./header";
 @use "./main-hero";
 @use "./our-servic";
+@use "./our-customer";
+@use "./footer";
