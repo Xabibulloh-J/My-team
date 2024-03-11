@@ -1,0 +1,387 @@
+@use "../variables" as *;
+@use "../mixins" as m;
+
+/* contact page's section one start */
+.contact-hero {
+   position: relative;
+   padding-top: 40px;
+   padding-bottom: 68px;
+   background-color: var(--main-midnight-green);
+
+   &::after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      @include m.before-after(block, 82px, 97px, "");
+      @include m.background-img(url("/images/contact-bg-img-mobile.svg"), 82px 97px, no-repeat, center, center);
+   }
+
+   &__title {
+      margin-top: 0;
+      margin-bottom: 12px;
+      text-align: center;
+      font-size: 30px;
+      font-weight: var(--main-font-weight-700);
+      line-height: 30px;
+      color: var(--main-white);
+   }
+
+   &__small-title {
+      display: block;
+      text-align: center;
+      font-size: 22px;
+      font-weight: var(--main-font-weight-700);
+      line-height: 38px;
+      color: var(--main-light-coral);
+   }
+
+   &__list {
+      @include m.flexbox(flex, column, null, null, 20px, null);
+      @include m.list-unstyled(36px, 52px);
+   }
+
+   &__item {
+      @include m.flexbox(flex, null, null, center, null, 19px);
+
+      &:nth-child(1)::before {
+         max-width: 52px;
+         @include m.before-after(inline-block, 100%, 52px, "");
+         @include m.background-img(url("/images/contact-quality.svg"), 52px 52px, no-repeat, center, center);
+      }
+
+      &:nth-child(2)::before {
+         max-width: 52px;
+         @include m.before-after(inline-block, 100%, 52px, "");
+         @include m.background-img(url("/images/settings-verified.svg"), 52px 52px, no-repeat, center, center);
+      }
+
+      &:nth-child(3)::before {
+         max-width: 52px;
+         @include m.before-after(inline-block, 100%, 52px, "");
+         @include m.background-img(url("/images/diagramma.svg"), 52px 52px, no-repeat, center, center);
+      }
+   }
+
+   &__desc {
+      display: inline-block;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 13px;
+      font-weight: var(--main-font-weight-700);
+      line-height: 24px;
+      color: var(--main-white);
+   }
+
+   &__inputs-and-btn-wrapper {
+      @include m.flexbox(flex, column, null, null, 20px, null);
+   }
+
+   &__input {
+      padding: 0 0 13px 10px;
+      border: none;
+      border-bottom: 1px solid var(--main-white);
+      font-size: 11px;
+      font-weight: var(--main-font-weight-600);
+      line-height: 21px;
+      letter-spacing: -0.115px;
+      color: var(--main-white);
+      background-color: transparent;
+      outline: none;
+
+      &::placeholder {
+         font-size: 11px;
+         font-weight: var(--main-font-weight-600);
+         line-height: 21px;
+         letter-spacing: -0.115px;
+         opacity: 0.6;
+         color: var(--main-white);
+      }
+
+      &:focus {
+         border-bottom: 1px solid var(--main-rapture-blue);
+      }
+   }
+
+   &__textarea {
+      padding: 0 0 54px 10px;
+      border: none;
+      border-bottom: 1px solid var(--main-white);
+      font-size: 11px;
+      font-weight: var(--main-font-weight-600);
+      line-height: 21px;
+      letter-spacing: -0.115px;
+      color: var(--main-white);
+      background-color: transparent;
+      resize: none;
+      outline: none;
+
+      &::placeholder {
+         font-size: 11px;
+         font-weight: var(--main-font-weight-600);
+         line-height: 21px;
+         letter-spacing: -0.115px;
+         opacity: 0.6;
+         color: var(--main-white);
+      }
+
+      &:focus {
+         border-bottom: 1px solid var(--main-rapture-blue);
+      }
+   }
+
+   &__button {
+      width: 123px;
+      padding: 9px 32px 11px 32px;
+      border: none;
+      border-radius: 24px;
+      background-color: var(--main-white);
+   }
+}
+/* contact page's section one finish */
+
+/* responsive design */
+@media only screen and (min-width: 320px) {
+   .contact-hero {
+      padding-bottom: 78px;
+   
+      &::after {
+         @include m.before-after(block, 92px, 107px, "");
+         @include m.background-img(url("/images/contact-bg-img-mobile.svg"), 92px 107px, no-repeat, center, center);
+      }
+   
+      &__title {
+         margin-bottom: 14px;
+         font-size: 35px;
+         line-height: 35px;
+      }
+   
+      &__small-title {
+         font-size: 27px;
+         line-height: 43px;
+      }
+   
+      &__list {
+         @include m.flexbox(flex, column, null, null, 22px, null);
+         @include m.list-unstyled(38px, 54px);
+      }
+   
+      &__item {
+         @include m.flexbox(flex, null, null, center, null, 21px);
+   
+         &:nth-child(1)::before {
+            max-width: 62px;
+            @include m.before-after(inline-block, 100%, 62px, "");
+            @include m.background-img(url("/images/contact-quality.svg"), 62px 62px, no-repeat, center, center);
+         }
+   
+         &:nth-child(2)::before {
+            max-width: 62px;
+            @include m.before-after(inline-block, 100%, 62px, "");
+            @include m.background-img(url("/images/settings-verified.svg"), 62px 62px, no-repeat, center, center);
+         }
+   
+         &:nth-child(3)::before {
+            max-width: 62px;
+            @include m.before-after(inline-block, 100%, 62px, "");
+            @include m.background-img(url("/images/diagramma.svg"), 62px 62px, no-repeat, center, center);
+         }
+      }
+   
+      &__desc {
+         font-size: 15px;
+         line-height: 26px;
+      }
+   
+      &__inputs-and-btn-wrapper {
+         @include m.flexbox(flex, column, null, null, 22px, null);
+      }
+   
+      &__input {
+         padding: 0 0 15px 12px;
+         font-size: 13px;
+         line-height: 23px;
+   
+         &::placeholder {
+            font-size: 13px;
+            line-height: 23px;
+         }
+      }
+   
+      &__textarea {
+         padding: 0 0 56px 12px;
+         font-size: 13px;
+         line-height: 23px;
+   
+         &::placeholder {
+            font-size: 13px;
+            line-height: 23px;
+         }
+      }
+   }
+}
+
+@media only screen and (min-width: 375px) {
+   .contact-hero {
+      padding-bottom: 88px;
+   
+      &::after {
+         @include m.before-after(block, 102px, 117px, "");
+         @include m.background-img(url("/images/contact-bg-img-mobile.svg"), 102px 117px, no-repeat, center, center);
+      }
+   
+      &__title {
+         margin-bottom: 16px;
+         font-size: 40px;
+         line-height: 40px;
+      }
+   
+      &__small-title {
+         font-size: 32px;
+         line-height: 48px;
+      }
+   
+      &__list {
+         @include m.flexbox(flex, column, null, null, 24px, null);
+         @include m.list-unstyled(40px, 56px);
+      }
+   
+      &__item {
+         @include m.flexbox(flex, null, null, center, null, 23px);
+   
+         &:nth-child(1)::before {
+            max-width: 72px;
+            @include m.before-after(inline-block, 100%, 72px, "");
+            @include m.background-img(url("/images/contact-quality.svg"), 72px 72px, no-repeat, center, center);
+         }
+   
+         &:nth-child(2)::before {
+            max-width: 72px;
+            @include m.before-after(inline-block, 100%, 72px, "");
+            @include m.background-img(url("/images/settings-verified.svg"), 72px 72px, no-repeat, center, center);
+         }
+   
+         &:nth-child(3)::before {
+            max-width: 72px;
+            @include m.before-after(inline-block, 100%, 72px, "");
+            @include m.background-img(url("/images/diagramma.svg"), 72px 72px, no-repeat, center, center);
+         }
+      }
+   
+      &__desc {
+         font-size: 18px;
+         line-height: 28px;
+      }
+   
+      &__inputs-and-btn-wrapper {
+         @include m.flexbox(flex, column, null, null, 24px, null);
+      }
+   
+      &__input {
+         padding: 0 0 17px 14px;
+         font-size: 15px;
+         line-height: 25px;
+   
+         &::placeholder {
+            font-size: 15px;
+            line-height: 25px;
+         }
+      }
+   
+      &__textarea {
+         padding: 0 0 58px 14px;
+         font-size: 15px;
+         line-height: 25px;
+   
+         &::placeholder {
+            font-size: 15px;
+            line-height: 25px;
+         }
+      }
+   }
+}
+
+@media only screen and (min-width: 768px) {
+   .contact-hero {
+      padding-top: 56px;
+      padding-bottom: 112px;
+
+      &::before {
+         position: absolute;
+         top: 45px;
+         left: 0;
+         @include m.before-after(block, 98px, 204px, "");
+         @include m.background-img(url("/images/bg-img.svg"), 98px 204px, no-repeat, center, center);
+      }
+   
+      &::after {
+         @include m.before-after(block, 102px, 224px, "");
+         @include m.background-img(url("/images/contact-bg-img-desktop.svg"), 102px 224px, no-repeat, center, center);
+      }
+
+      &__title-and-list-wrapper {
+         max-width: 515px;
+         margin: 0 auto;
+      }
+   
+      &__title {
+         margin-bottom: 24px;
+         font-size: 64px;
+         line-height: 56px;
+      }
+   
+      &__small-title {
+         font-size: 32px;
+         line-height: 48px;
+      }
+   
+      &__list {
+         @include m.flexbox(flex, column, null, null, 8px, null);
+         @include m.list-unstyled(24px, 64px);
+      }
+   
+      &__inputs-and-btn-wrapper {
+         max-width: 540px;
+         margin: 0 auto;
+      }
+   }
+}
+
+@media only screen and (min-width: 1150px) {
+   .contact-hero {
+      padding-top: 60px;
+      padding-bottom: 120px;
+
+      &::before {
+         top: 45px;
+      }
+
+      &__box {
+         @include m.flexbox(flex, null, space-between, center, null, null);
+      }
+
+      &__title-and-list-wrapper {
+         max-width: 540px;
+         width: 100%;
+         margin: 0;
+      }
+   
+      &__title {
+         margin-bottom: 16px;
+         text-align: start;
+         line-height: 100px;
+      }
+   
+      &__small-title {
+         text-align: start;
+      }
+   
+      &__list {
+         @include m.list-unstyled(32px, 0);
+      }
+   
+      &__inputs-and-btn-wrapper {
+         width: 100%;
+         margin: 0;
+      }
+   }
+}
