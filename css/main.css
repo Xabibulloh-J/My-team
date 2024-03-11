@@ -970,9 +970,11 @@ img {
 
 .open .directors__btn {
   background-color: var(--main-rapture-blue);
-  background-color: var(--main-light-coral);
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+.open .directors__btn:hover {
+  background-color: var(--main-light-coral);
 }
 
 @media only screen and (min-width: 375px) {
