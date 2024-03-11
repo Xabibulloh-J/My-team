@@ -1,0 +1,210 @@
+@use "../variables" as *;
+@use "../mixins" as m;
+
+/* header start */
+.site-header {
+   padding-top: 40px;
+   padding-bottom: 40px;
+   background-color: var(--main-midnight-green);
+
+   &__box {
+      @include m.flexbox(flex, null, space-between, center, null, null);
+   }
+
+   .logo__img {
+      width: 127px;
+   }
+
+   &__menu-btn {
+      width: 20px;
+      height: 17px;
+      border: none;
+      background-color: transparent;
+      @include m.background-img(url("/images/hamburg-menu.svg"), 20px 17px, no-repeat, center, center);
+   }
+
+   &__menu-background {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #00000080;
+   }
+
+   &__menu-wrapper {
+      width: 65vw;
+      height: 100vh;
+      margin-left: auto;
+      padding: 50px 21px 0 44px;
+      background-color: var(--main-police-blue);
+
+      &::before {
+         position: absolute;
+         right: 0;
+         bottom: 0;
+         @include m.before-after(inline-block, 100px, 199px, "");
+         @include m.background-img(url("/images/hamburg-menu-bg-img.svg"), 100px 199px, no-repeat, null, null);
+      }
+   }
+
+   &__open-menu-btn {
+      display: block;
+      width: 16px;
+      height: 16px;
+      margin-left: auto;
+      border: none;
+      background-color: transparent;
+      @include m.background-img(url("/images/hamburg-menu-close.svg"), 16px 16px, no-repeat, center, center);
+   }
+
+   &__list {
+      @include m.flexbox(flex, column, null, null, 20px, null);
+      @include m.list-unstyled(35px, 32px);
+   }
+
+   &__link {
+      @include m.link-unstyled(inline-block, var(--main-white));
+      font-size: 14px;
+      line-height: 24px;
+   }
+
+   &__contact-link {
+      @include m.link-unstyled(inline-block, var(--main-white));
+      padding: 5px 21px 6px 22px;
+      border: 2px solid var(--main-white);
+      border-radius: 24px;
+      font-size: 14px;
+      line-height: 24px;
+   }
+}
+.open-menu .site-header__menu-background {
+   display: block;
+}
+/* header finish */
+
+/* header responsive design */
+@media only screen and (min-width: 320px) {
+   .site-header {
+      padding-top: 44px;
+
+      &__menu-wrapper {
+         padding: 53px 23px 0 46px;
+      }
+
+      &__list {
+         @include m.flexbox(flex, column, null, null, 22px, null);
+         @include m.list-unstyled(37px, 34px);
+      }
+
+      &__link {
+         font-size: 16px;
+         line-height: 26px;
+      }
+
+      &__contact-link {
+         padding: 7px 26px 8px 27px;
+         font-size: 16px;
+         line-height: 26px;
+      }
+   }
+}
+
+@media only screen and (min-width: 375px) {
+   .site-header {
+      padding-top: 48px;
+
+      &__menu-wrapper {
+         padding: 56px 25px 0 48px;
+      }
+
+      &__list {
+         @include m.flexbox(flex, column, null, null, 24px, null);
+         @include m.list-unstyled(39px, 36px);
+      }
+
+      &__link {
+         font-size: 18px;
+         line-height: 28px;
+      }
+
+      &__contact-link {
+         padding: 9px 33px 11px 34px;
+         font-size: 16px;
+         line-height: 26px;
+      }
+   }
+}
+
+@media only screen and (min-width: 768px) {
+   .site-header {
+      padding-top: 64px;
+      padding-bottom: 56px;
+
+      &__menu-btn {
+         display: none;
+      }
+
+      &__menu-background {
+         display: block;
+         position: static;
+         max-width: 1000px;
+         height: auto;
+         margin-left: 48px;
+         background-color: transparent;
+      }
+
+      &__menu-wrapper {
+         @include m.flexbox(flex, row, space-between, center, null, null);
+         max-width: 1000px;
+         height: auto;
+         margin-left: 0;
+         padding: 0;
+         background-color: transparent;
+
+         &::before {
+            position: static;
+            @include m.before-after(none, 100px, 199px, none);
+            @include m.background-img(none, 100px 199px, no-repeat, null, null);
+         }
+      }
+
+      &__open-menu-btn {
+         display: none;
+      }
+
+      &__list {
+         @include m.flexbox(flex, row, null, null, null, 40px);
+         @include m.list-unstyled(0, 0);
+      }
+   }
+}
+
+@media only screen and (min-width: 1150px) {
+   .site-header {
+      padding-top: 73px;
+      padding-bottom: 60px;
+
+      &__menu-background {
+         margin-left: 80px;
+      }
+
+      &__link {
+         transition: color 0.3s linear;
+
+         &:hover {
+            color: var(--main-light-coral);
+         }
+      }
+
+      &__contact-link {
+         transition: background-color 0.3s linear;
+
+         &:hover {
+            color: #000;
+            background-color: var(--main-white);
+         }
+      }
+   }
+}
